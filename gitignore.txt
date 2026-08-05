@@ -1,0 +1,60 @@
+# ===== Sneh's AppLocker: sensitive/local files =====
+# Contains password hashes & obfuscated app passwords — never commit this
+snehs_applocker_config.json
+*.applocker_config.json
+
+# ===== PyInstaller build output =====
+build/
+dist/
+*.spec.bak
+__pycache__/
+
+# ===== Python =====
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+*.egg
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+pip-wheel-metadata/
+
+# ===== Packaging / distribution =====
+*.manifest
+*.spec
+!SnehAppLocker.spec
+*.exe
+*.msi
+*.zip
+*.tar.gz
+
+# Note: we exclude .exe files by default above since they're build artifacts.
+# If you intend to ship the compiled executable via GitHub Releases (recommended)
+# rather than committing it directly to the repo, keep this rule.
+# If you specifically want to commit dist/SnehAppLocker.exe, add an exception below:
+# !dist/SnehAppLocker.exe
+
+# ===== IDE / editor =====
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ===== Logs =====
+*.log
+
+# ===== OS junk =====
+desktop.ini
+$RECYCLE.BIN/
+
+# ===== Testing / coverage =====
+.pytest_cache/
+.coverage
+htmlcov/
